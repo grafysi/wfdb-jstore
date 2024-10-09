@@ -1,0 +1,19 @@
+.red-text {
+    -fx-fill: red;
+}
+
+.json-property {
+    -fx-fill: blue;
+}
+
+.json-number {
+    -fx-fill: purple;
+}
+
+.json-string {
+    -fx-fill: red;
+}
+
+.paragraph-box:has-caret {
+    -fx-background-color: #f2f9fc;
+}

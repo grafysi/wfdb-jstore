@@ -27,7 +27,7 @@ public class Wave4jClient {
 
     }
 
-    public void connect(NioEventLoopGroup workerGroup) throws InterruptedException {
+    public void connect(NioEventLoopGroup workerGroup, String serverHost, int serverPort) throws InterruptedException {
         var objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
 

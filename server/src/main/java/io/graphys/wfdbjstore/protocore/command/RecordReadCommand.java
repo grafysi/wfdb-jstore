@@ -29,7 +29,7 @@ public final class RecordReadCommand extends Command<RecordReadDescription, Reco
         var repo = getMetadataRepository();
 
         var name = description.name();
-        var infoPatterns = description.textInfoPattern();
+        var infoPatterns = description.textInfoPatterns();
         var limit = description.limit() == null ? Integer.MAX_VALUE : description.limit();
 
         // find by both text info and name
@@ -75,7 +75,7 @@ public final class RecordReadCommand extends Command<RecordReadDescription, Reco
 
     private boolean testTextInfo(String[] actualInfo) {
         return Arrays
-                .stream(description.textInfoPattern())
+                .stream(description.textInfoPatterns())
                 .allMatch(pattern -> anyMatch(pattern, false, actualInfo));
     }
 

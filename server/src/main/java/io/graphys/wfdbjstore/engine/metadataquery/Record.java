@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 public final class Record implements Metadata {
     private String name;
+    private long totalSamples;
     private SignalInfo[] signalInfo;
     private double sampleFrequency;
     private LocalDateTime baseTime;

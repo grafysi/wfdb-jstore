@@ -1,4 +1,3 @@
-
 plugins {
     java
     application
@@ -18,6 +17,7 @@ dependencies {
     implementation(libs.log4j.core)
     implementation(libs.netty.all)
     implementation(project(":record-store"))
+    implementation(project(":protocol"))
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }

@@ -18,7 +18,8 @@ import java.util.concurrent.StructuredTaskScope;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Wave4jClientTest {
-    private static final Logger logger = LogManager.getLogger(Wave4jClientTest.class);
+
+    private static final Logger logger = LogManager.getLogger(ReadMetadataRecordTest.class);
 
     @Test
     public void testBasicCommand() {
@@ -52,8 +53,9 @@ public class Wave4jClientTest {
     }
 
     private void doSomeCommands(int ordinal, NioEventLoopGroup workerGroup) throws InterruptedException {
+
         var client = new Wave4jClient();
-        client.connect(workerGroup);
+        client.connect(workerGroup, "localhost", 18080);
 
         var start = Instant.now();
 
@@ -77,7 +79,7 @@ public class Wave4jClientTest {
                         .commandType(CommandType.READ_METADATA_RECORD)
                         .description(
                                 RecordReadDescription.builder()
-                                        //.name("83268087")
+                                        .name("81739927")
                                         .build())
                         .build());
         printReport(report);
@@ -85,5 +87,19 @@ public class Wave4jClientTest {
         logger.info("Connection 1 done in {} ms", Duration.between(start, Instant.now()).toMillis());
 
         client.close().sync();
+    }
+
+    @Test
+    public void testBasicCommand2() {
+        try (
+             var workerGroup = new NioEventLoopGroup()
+        ) {
+            doSomeCommands(0, workerGroup);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        finally {
+
+        }
     }
 }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grafysi.wfdbconsole.controller.ConsoleAppController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+         <items>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="WFDB CONSOLE   ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Separator orientation="VERTICAL" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Connection count: 1" />
+            <Separator orientation="VERTICAL" />
+            <Button fx:id="addConnectionButton" mnemonicParsing="false" text="Add connection" />
+            <Separator orientation="VERTICAL" />
+            <MenuButton fx:id="newConnectionTabMenuButton" mnemonicParsing="false" text="New connection tab">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </MenuButton>
+         </items>
+      </ToolBar>
+      <TabPane fx:id="consoleTabPane" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+               <content>
+                  <VBox />
+               </content></Tab>
+          <Tab text="Untitled Tab 2" />
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

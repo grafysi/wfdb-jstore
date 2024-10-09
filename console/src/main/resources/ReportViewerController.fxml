@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grafysi.wfdbconsole.controller.ReportViewerController">
+   <children>
+      <TableView fx:id="reportTableView" maxHeight="2000.0" maxWidth="2000.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Expander" />
+          <TableColumn prefWidth="108.0" text="CmdType" />
+            <TableColumn prefWidth="82.0" text="Description" />
+            <TableColumn prefWidth="95.0" text="StatusCode" />
+            <TableColumn prefWidth="95.0" text="FailedMsg" />
+            <TableColumn prefWidth="127.0" text="ContentCount" />
+            <TableColumn prefWidth="127.0" text="ExecTime" />
+            <TableColumn prefWidth="127.0" text="Action" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+   </padding>
+</VBox>

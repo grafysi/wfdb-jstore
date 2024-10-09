@@ -13,10 +13,10 @@ public class Report {
     @Getter
     private final CommandType commandType;
 
-    @Setter
+    @Setter @Getter
     private StatusCode statusCode;
 
-    @Setter
+    @Setter @Getter
     private String failedMessage;
 
     @Getter

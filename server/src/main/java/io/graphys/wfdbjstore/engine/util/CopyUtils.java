@@ -40,6 +40,7 @@ public class CopyUtils {
         return Record
                 .builder()
                 .name(record.getName())
+                .totalSamples(record.getTotalSamples())
                 .signalInfo(
                         Arrays
                                 .stream(record.getSignalInfo())

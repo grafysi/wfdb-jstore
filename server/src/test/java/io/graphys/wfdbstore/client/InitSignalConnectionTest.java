@@ -23,7 +23,7 @@ public class InitSignalConnectionTest {
 
             var client = new Wave4jClient();
 
-            client.connect(workerGroup);
+            client.connect(workerGroup, "localhost", 18080);
 
             var description = SignalConnectionDescription.builder()
                     .scheme("basic")
