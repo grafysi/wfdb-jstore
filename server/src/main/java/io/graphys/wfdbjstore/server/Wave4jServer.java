@@ -142,7 +142,7 @@ public class Wave4jServer {
     }
 
     public static void main(String[] args) throws Exception {
-        var host = "localhost";
+        var host = "0.0.0.0";
         var port = 18080;
         logger.info("Server started at {}:{}", host, port);
         var server = new Wave4jServer(host, port);
