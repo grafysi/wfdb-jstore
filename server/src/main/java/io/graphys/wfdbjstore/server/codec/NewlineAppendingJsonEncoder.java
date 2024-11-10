@@ -32,6 +32,6 @@ public class NewlineAppendingJsonEncoder extends MessageToByteEncoder<Object> {
         frame = frame + "\n";
         out.writeCharSequence(frame, ExchangeConvention.CHARSET);
 
-        logger.info("Frame sent: {}", frame.substring(0, frame.length() - 1));
+        logger.debug("Frame sent: {}", frame.substring(0, frame.length() - 1));
     }
 }
